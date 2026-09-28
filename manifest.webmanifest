@@ -1,0 +1,28 @@
+{
+  "id": "./",
+  "name": "Império do Açaí | Painel",
+  "short_name": "Império do Açaí",
+  "description": "Painel administrativo e central de entregas da Império do Açaí.",
+  "lang": "pt-BR",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#6f275f",
+  "theme_color": "#6f275f",
+  "categories": ["business", "food", "productivity"],
+  "icons": [
+    {
+      "src": "./pwa-icon-192.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "./pwa-icon-512.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
