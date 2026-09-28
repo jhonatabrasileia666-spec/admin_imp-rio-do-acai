@@ -1399,9 +1399,14 @@ window.LVAlerts=(()=>{
     document.querySelector('#login-screen').style.display='none';
     document.querySelector('#panel-app').classList.add('authenticated');
     try{
-      await initPanel();
       window.ImperioMesas?.applyRole?.(profile);
-      setTimeout(()=>window.LVBackgroundPush?.onboard?.('admin'),350);
+      if(profile?.role==='garcom'){
+        switchView('tables');
+        await window.ImperioMesas?.openTables?.();
+      }else{
+        await initPanel();
+        setTimeout(()=>window.LVBackgroundPush?.onboard?.('admin'),350);
+      }
     }catch(error){
       console.error('Erro ao iniciar painel:',error);
       showToast('Erro ao iniciar painel');
