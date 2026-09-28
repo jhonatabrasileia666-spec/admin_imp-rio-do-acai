@@ -536,6 +536,8 @@ window.LVAlerts=(()=>{
   let panelProfile=null;
   let db=createPanelClient();
   const publicDb=db;
+  window.getImperioDb=()=>db;
+  window.getImperioProfile=()=>panelProfile;
   async function panelAuth(action,{login=null,password=null,newPassword=null}={}){
     const requestedRole=window.IMPERIO_LOGIN_ROLE||'owner';
     if(action==='login'){
